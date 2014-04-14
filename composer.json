@@ -1,0 +1,23 @@
+{
+  "name":"rodgermd/ibanapide-bundle",
+  "description":"iban-api.de integration",
+  "homepage":"https://github.com/rodgermd/IbanApiDebundle",
+  "type":"symfony-bundle",
+  "license":"MIT",
+  "authors":[
+    {
+      "name":"Alexander Murashov",
+      "email":"rodger@ladela.com"
+    }
+  ],
+  "require": {
+    "php-soap-ext": "*"
+  },
+  "autoload":{
+    "psr-0":{
+      "Rodgermd\\IbanApiDeBundle":""
+    }
+  },
+  "target-dir":"Rodgermd/IbanApiDeBundle"
+}
+
