@@ -1,0 +1,3 @@
+services:
+  rodgermd.iban.api:
+    class: Rodgermd\IbanApiDeBundle\Api\IbanAPI
