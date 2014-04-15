@@ -1,3 +1,7 @@
 services:
   rodgermd.iban.api:
     class: Rodgermd\IbanApiDeBundle\Api\IbanAPI
+  rodgermd.iban.generator:
+    class: Rodgermd\IbanApiDeBundle\Generator\IbanGenerator
+    arguments: [@request, @rodgermd.iban.api]
+    scope: request

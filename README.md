@@ -3,6 +3,18 @@ IbanApiDebundle
 
 Integration of http://www.iban-api.de/soap-service/
 
+Add Controller for ajax actions
+====
+
+Add to routing.yml:
+
+~~~
+rodgermd_iban_controller:
+    resource: "@RodgermdIbanApiDeBundle/Controller/"
+    type: annotation
+    prefix: /iban
+~~~
+
 Usage
 ===
 

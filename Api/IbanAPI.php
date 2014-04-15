@@ -40,10 +40,15 @@ class IbanAPI
      * @param $bankIdentification
      * @param $accountNr
      *
+     * @throws \Rodgermd\IbanApiDeBundle\Exception\IbanApiErrorException
      * @return string
      */
     public function generateIBAN($countryCode, $bankIdentification, $accountNr)
     {
+        if (!($countryCode && $bankIdentification && $accountNr)) {
+            throw new IbanApiErrorException("Missing data");
+        }
+
         $function = 'generateIban';
 
         $result = $this->client->__soapCall(
@@ -65,10 +70,15 @@ class IbanAPI
      *
      * @param $iban
      *
+     * @throws \Rodgermd\IbanApiDeBundle\Exception\IbanApiErrorException
      * @return string
      */
     public function getBicFromIban($iban)
     {
+        if (!$iban) {
+            throw new IbanApiErrorException("Missing data");
+        }
+
         $function = 'getBicFromIban';
 
         return $this->parseResult($this->client->__soapCall($function, array(array('iban' => $iban,))), $function);

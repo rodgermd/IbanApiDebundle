@@ -18,7 +18,7 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
  *
  * @package Rodgermd\IbanApiDeBundle\DependencyInjection
  */
-class RodgermdIbanApiDeBundle extends Extension
+class RodgermdIbanApiDeExtension extends Extension
 {
     /**
      * Loads a specific configuration.
