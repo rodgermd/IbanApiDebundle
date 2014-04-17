@@ -5,11 +5,7 @@ $.generate_iban = ( options ) ->
       return false unless options[field] and options[field].length
     true
 
-  console.log 'starting iban', options
-
   return false unless valid_options(['country', 'bank_code', 'account_nr', 'iban'])
-
-  console.log 'started'
 
   timeout = null
 
